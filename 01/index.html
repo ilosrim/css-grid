@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    :root {
+      --main-bg: darkslategray;
+      --last-bg: rgb(84, 129, 129);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: monospace, sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5));
+    }
+
+    .container {
+      width: 500px;
+      height: 600px;
+      background-color: var(--main-bg);
+      border-radius: 10px;
+      box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.1), 5px 15px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .result {
+      height: 20%;
+      width: 100%;
+      background-color: var(--last-bg);
+      border-bottom: 3px solid var(--main-bg);
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      padding: 10px;
+    }
+
+    .input {
+      height: 10%;
+      background-color: var(--last-bg);
+      padding: 10px;
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: auto auto auto auto auto;
+      padding: 10px;
+      height: 70%;
+    }
+
+    .item {
+      background-color: var(--last-bg);
+      border: 2px solid var(--main-bg);
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.5s linear;
+      cursor: pointer;
+    }
+
+    .item:hover {
+      opacity: 0.5;
+    }
+
+    .item:active {
+      transform: scale(0.7);
+    }
+
+    .item-end {
+      grid-row-start: 4;
+      grid-row-end: 6;
+      grid-column-start: 5;
+      grid-column-end: 6;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+
+    <!-- result section -->
+    <section class="result" id="result">
+      result
+    </section>
+
+    <!-- input section -->
+    <section class="input" id="input">
+      <span class="input">input</span>
+    </section>
+
+    <!-- content section -->
+    <section class="content" id="content">
+      <div onclick="play()" class="item" style="font-size: 24px;"> « </div>
+      <div onclick="play()" class="item"> ( </div>
+      <div onclick="play()" class="item"> ) </div>
+      <div onclick="play()" class="item"> mod </div>
+      <div onclick="play()" class="item"> π </div>
+      <div onclick="play()" class="item num"> 7 </div>
+      <div onclick="play()" class="item num"> 8 </div>
+      <div onclick="play()" class="item num"> 9 </div>
+      <div onclick="play()" class="item num"> ÷ </div>
+      <div onclick="play()" class="item num"> √ </div>
+      <div onclick="play()" class="item num"> 4 </div>
+      <div onclick="play()" class="item num"> 5 </div>
+      <div onclick="play()" class="item num"> 6 </div>
+      <div onclick="play()" class="item"> × </div>
+      <div onclick="play()" class="item"> x<sub>2</sub> </div>
+      <div onclick="play()" class="item num"> 1 </div>
+      <div onclick="play()" class="item num"> 2 </div>
+      <div onclick="play()" class="item num"> 3 </div>
+      <div onclick="play()" class="item"> - </div>
+      <div onclick="play()" class="item num"> 0 </div>
+      <div onclick="play()" class="item"> . </div>
+      <div onclick="play()" class="item"> % </div>
+      <div onclick="play()" class="item"> + </div>
+      <div onclick="play()" onclick="a" class="item item-end">=</div>
+    </section>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+
+</html>
