@@ -7,32 +7,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    body {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-    }
-
     .container {
-      width: 200px;
-      height: 150px;
-      background-color: darkslategray;
+      width: 1140px;
+      height: 770px;
+      margin: 15px auto;
+      /* background-color: darkslategray; */
       display: grid;
-      grid-template-columns: auto auto auto;
+      grid-template-columns: auto auto auto auto;
       grid-gap: 20px;
-      justify-content: center;
-      align-items: center;
     }
 
     .box {
-      width: 50px;
-      height: 50px;
+
       background: #000;
       color: #fff;
       display: flex;
       align-items: center;
       justify-content: center;
+    }
+
+    .box-1 {
+      grid-row-start: 1;
+      grid-row-end: 3;
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+
+    .box-2 {
+      grid-row-start: 1;
+      grid-row-end: 3;
+    }
+
+    .box-3 {
+      grid-row-start: 1;
+      grid-row-end: 5;
+    }
+
+    .box-4 {
+      grid-row-start: 3;
+      grid-row-end: 5;
     }
   </style>
 </head>
@@ -41,12 +54,14 @@
 
 
   <div class="container">
-    <div class="box">1</div>
-    <div class="box">1</div>
-    <div class="box">1</div>
-    <div class="box">1</div>
-    <div class="box">1</div>
-    <div class="box">1</div>
+    <div class="box box-1">1</div>
+    <div class="box box-2">2</div>
+    <div class="box box-3">3</div>
+    <div class="box box-4">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
   </div>
 
 </body>
